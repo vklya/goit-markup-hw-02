@@ -1,65 +1,75 @@
-a {
+:root {
+    --bgd-color: #2F303A;
+    --accent-color: #2196F3;
+    --special-color: #188CE8;
+    --p-color: #757575;
+    --milk-color: #F5F4FA;
+    --main-color: #212121;
+    --clear-gray-color: rgba(255, 255, 255, 0.6);
+    --light-gray-color: #FFFFFF;
+    --white-color: #fff;
+    --black-color: #000;
+}
+
+.link {
     text-decoration: none;
-    color: inherit;
 }
 
-ul {
-    padding: 0;
-}
 
-li {
+.list {
     list-style-type: none;
 }
 
 .logo-header {
-    color: #000;
+    color: var(--black-color);
     font-family: 'Raleway';
     font-weight: 700;
     font-size: 26px;
     line-height: 31px;
 }
 
-span.logo-part {
-    color: #2196F3;
-}
-
-a:focus,
-a:hover,
-.current {
-    color: #2196F3;
+.logo-part {
+    color: var(--accent-color);
 }
 
 .main-menu {
+    color: inherit;
     letter-spacing: 0.02em;
     font-weight: 500;
     font-size: 14px;
     line-height: 16px;
+}
+
+.link:hover,
+.link:focus,
+.current {
+    color: var(--accent-color);
 }
 
 .contacts-header {
-    color: #757575;
+    color: var(--p-color);
     font-weight: 500;
     font-size: 14px;
     line-height: 16px;
     letter-spacing: 0.02em;
 }
 
-h1 {
+.header-main-page {
     font-weight: 900;
     font-size: 44px;
     line-height: 60px;
-    color: #fff;
+    color: var(--white-color);
     text-transform: uppercase;
+    letter-spacing: 0.06em;
 }
 .main-page {
-    background-color: #2F303A;
-    padding: 200px 452px;
+    background-color: var(--bgd-color);
     text-align: center;
 }
 
 .main-page-button {
-    color: #fff;
-    background-color: #2196F3;
+    color: var(--white-color);
+    background-color: var(--accent-color);
     cursor: pointer;
     border: none;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -68,23 +78,30 @@ h1 {
     font-weight: 700;
     font-size: 16px;
     line-height: 30px;
+    letter-spacing: 0.06em;
+    font-family: inherit;
 }
 
-.feature > h3 {
+.main-page-button:hover
+.main-page-button:focus {
+    background-color: var(--special-color);
+}
+
+.feature-header {
     font-weight: 700;
     font-size: 14px;
     line-height: 16px;
     text-transform: uppercase;
 }
 
-.feature > p {
+.feature-paragraph {
     font-weight: 400;
     font-size: 14px;
     line-height: 24px;
-    color: #757575;
+    color: var(--p-color);
 }
 
-h2 {
+.index-header {
     font-weight: 700;
     font-size: 36px;
     line-height: 42px;
@@ -92,52 +109,47 @@ h2 {
 }
 
 .team {
-    background-color: #F5F4FA;
+    background-color: var(--milk-color);
     width: 100%;
 }
 
 .team-card {
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
-    background-color: #fff;
-    width: 270px;
-    height: 368px;
+    background-color: var(--white-color);
     text-align: center;
 }
 
-.team-card > h3 {
+.team-name {
     font-weight: 500;
     font-size: 16px;
     line-height: 19px;
 }
 
-.team-card > p {
+.team-post {
     font-weight: 400;
     font-size: 16px;
     line-height: 19px;
-    color: #757575;
+    color: var(--p-color);
 }
 
 footer {
-    height: 252px;
-    width: 100%;
-    background-color: #2F303A;
-    padding: 60px 215px;
+    background-color: var(--bgd-color);
 }
 
 address {    
-    font-family: 'Roboto';
+    font-family: inherit;
     font-style: normal;
     margin-top: 20px;
     font-weight: 400;
     font-size: 14px;
     line-height: 24px;
     letter-spacing: 0.03em;
-    color: #fff;
+    color: var(--white-color);
 }    
     
 .logo-footer {    
-    color: #fff;
+    color: var(--white-color);
     font-family: 'Raleway';
     font-weight: 700;
     font-size: 26px;
@@ -145,12 +157,16 @@ address {
 }
 
 .contacts-footer {
-    color: rgba(255, 255, 255, 0.6);
+    color: var(--clear-gray-color);
 }
 
-button.filters {
+.adress-footer {
+    color: var(--white-color);
+}
+
+.filter {
     cursor: pointer;
-    background: #F5F4FA;
+    background-color: var(--milk-color);
     border-radius: 4px;
     border: none;
     padding: 6px 22px;
@@ -158,34 +174,36 @@ button.filters {
     font-size: 16px;
     line-height: 26px;
     text-align: center;
-    font-family: 'Roboto';
+    font-family: inherit;
 }
 
-button.filters:focus,
-button.filters:hover,
-button.filters:active {
-    color: #fff;
-    background-color: #2196F3;
+.filter:focus,
+.filter:hover,
+.filter:active {
+    color: var(--white-color);
+    background-color: var(--accent-color);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .project {
     width: 370px;
     height: 404px;
-    border: 1px solid rgba(238, 238, 238, 1);
-    background-color: #FFF;
+    border: 1px solid var(--light-gray-color);
+    background-color: var(--white-color);
 }
 
-.project > h3 {
+.project-header {
     font-weight: 700;
     font-size: 18px;
     line-height: 36px;
     letter-spacing: 0.06em;
+    color: var(--main-color);
+    text-align: left;
 }
 
-.project > p {
+.project-paragraph {
     font-weight: 400;
     font-size: 16px;
     line-height: 30px;
-    color: #757575;
+    color: var(--p-color)
 }
